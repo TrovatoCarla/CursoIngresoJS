@@ -20,7 +20,5 @@ suma=primernumero+segundonumero;
 alert("La suma es: " +suma);
 
 
-
-
 }
 
