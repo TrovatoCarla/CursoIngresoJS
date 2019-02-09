@@ -5,16 +5,22 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 var sueldo;
+var sueldoConAumento;
 var aumento;
-var resultado;
 
-sueldo=FormIngreso.value;
-aumento=FormIngreso.value;
-resultado=FormIngreso.value;
+
+sueldo=document.getElementById('sueldo').value;
 
 sueldo=parseInt(sueldo);
-aumento=parseInt(aumento);
-resultado=sueldo%aumento;
+
+aumento= sueldo*0.1;
+
+sueldoConAumento=sueldo+aumento;
+
+document.getElementById('resultado').value=sueldoConAumento;
+
+//El igual va al final porque quiero plasmar en el html lo generado en javascript, en este caso sueldoConAumento
+
 
 
 
