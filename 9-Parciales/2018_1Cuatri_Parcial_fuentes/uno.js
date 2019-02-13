@@ -10,7 +10,9 @@ largo=prompt("Ahora indique el largo");
 ancho=parseInt(ancho);
 largo=parseInt(largo);
 
-perimetro=ancho+largo;
+lados=ancho+largo;
+perimetro=lados*2;
+
 
 alert(perimetro);
 

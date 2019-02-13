@@ -10,7 +10,9 @@ descuento=prompt("Ahora indique el porcentaje de descuento");
 precio=parseInt(precio);
 descuento=parseInt(descuento);
 
-precioConDescuento=precio*descuento/100+precio;
+descuento=precio*descuento/100;
+precioConDescuento=precio-descuento;
+
 
 document.getElementById('elPrecioFinal').value=precioConDescuento;
 
