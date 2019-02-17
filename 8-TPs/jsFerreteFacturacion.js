@@ -10,16 +10,17 @@ function Sumar ()
 	var producto3;
 	var suma;
 
-	document.getElementById('PrecioUno').value=producto1;
+	producto1=PrecioUno.value;
+	producto2=PrecioDos.value;
+	producto3=PrecioTres.value
+
 	producto1=parseInt(producto1);
-	document.getElementById('PrecioDos').value=producto2;
 	producto2=parseInt(producto2);
-	document.getElementById('PrecioTres').value=producto3;
 	producto3=parseInt(producto3);
 
 	suma=producto1+producto2+producto3;
 
-	alert("Precio final " +suma);
+	alert(suma);
 
 }
 function Promedio () 
