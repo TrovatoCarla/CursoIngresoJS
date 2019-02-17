@@ -26,6 +26,12 @@ function comenzar()
 
 function verificar()
 {
+	var numeroingresado;
+	numeroingresado=numero.value;
+
+	if(numeroingresado==numeroSecreto);
+
+	alert("Usted es u")
 	
 	
 

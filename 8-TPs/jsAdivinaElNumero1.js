@@ -15,7 +15,7 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	numeroSecreto=Math.floor(Math.random() * 100) + 1;
 
-	alert(numeroSecreto);
+	
 		//alert(numeroSecreto );
 		contadorIntentos=0;
 
@@ -25,10 +25,19 @@ function comenzar()
 
 function verificar()
 {
-	
+	contadorIntentos=contadorIntentos+1;
 	var numeroIngresado;
 	numeroIngresado=numero.value;
-	if(numeroIngresado==numeroSecreto);
-
-	alert("Usted es un ganador!!! y en solo X intentos");
+	if(numeroIngresado==numeroSecreto)
+	{
+	alert("Usted es un ganador!!! y en solo " +contadorIntentos+  " intentos");
+	}
+	if(numeroIngresado>numeroSecreto)
+	{	
+		alert("Te pasaste");
+		}
+	if(numeroIngresado<numeroSecreto)
+	{
+		alert("Falta");
+		}
 }
