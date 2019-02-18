@@ -37,5 +37,18 @@ function Circulo ()
 }
 function Materiales () 
 {
-	
+	var elAncho;
+	var elLargo;
+
+	elAncho=Ancho.value;
+	elLargo=Largo.value;
+
+	elAncho=parseInt(elAncho);
+	elLargo=parseInt(elLargo);
+
+	superficie=elAncho*elLargo;
+	cal=superficie*3;
+	cemento=superficie*2;
+
+	alert("La cantidad de bolsas de cal " +cal+ " y de cemento " +cemento);
 }
