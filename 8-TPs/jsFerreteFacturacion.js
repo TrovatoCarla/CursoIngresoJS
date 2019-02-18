@@ -5,40 +5,42 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	var producto1;
-	var producto2;
-	var producto3;
+	var productoUno;
+	var productoDos;
+	var productoTres;
 	var suma;
 
-	producto1=PrecioUno.value;
-	producto2=PrecioDos.value;
-	producto3=PrecioTres.value
+	productoUno=PrecioUno.value;
+	productoDos=PrecioDos.value;
+	productoTres=PrecioTres.value;
 
-	producto1=parseInt(producto1);
-	producto2=parseInt(producto2);
-	producto3=parseInt(producto3);
 
-	suma=producto1+producto2+producto3;
+	productoUno=parseInt(productoUno);
+	productoDos=parseInt(productoDos);
+	productoTres=parseInt(productoTres);
 
-	alert(suma);
+	suma=(productoUno+productoDos+productoTres);
+
+	alert("La suma es " +suma);
 
 }
+
 function Promedio () 
 {
-	var producto1;
-	var producto2;
-	var producto3;
+	var productoUno;
+	var productoDos;
+	var productoTres;
 	var promedio;
 
-	document.getElementById('PrecioUno')=producto1;
-	document.getElementById('PrecioDos')=producto2;
-	document.getElementById('PrecioTres')=producto3;
+	document.getElementById('PrecioUno')=productoUno;
+	document.getElementById('PrecioDos')=productoDos;
+	document.getElementById('PrecioTres')=productoTres;
 
-	producto1=parseInt(producto1);
-	producto2=parseInt(producto2);
-	producto3=parseInt(producto3);
+	productoUno=parseInt(productoUno);
+	productoDos=parseInt(productoDos);
+	productoTres=parseInt(productoTres3);
 
-	suma=producto1+producto2+producto3;
+	suma=productoUno+productoDos+productoTres;
 	promedio=suma/3;
 	
 	alert("El promedio es " +promedio);
@@ -46,5 +48,24 @@ function Promedio ()
 }
 function PrecioFinal () 
 {
-	
+	var productoUno;
+	var productoDos;
+	var productoTres;
+
+	productoUno=PrecioUno.value;
+	productoDos=PrecioDos.value;
+	productoTres=PrecioTres.value;
+
+	productoUno=parseInt(productoUno);
+	productoDos=parseInt(productoDos);
+	productoTres=parseInt(productoTres);
+
+	suma=productoUno+productoDos+productoTres;
+	IVA=suma*0.21;
+	precioFinal=suma+IVA;
+
+	alert("El precio final es " +precioFinal);
+
+
+
 }
