@@ -3,7 +3,7 @@ A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
-function Sumar () 
+function Sumar () //ESTE NO FUNCIONA!!!!! SOLO EL DE SUMA
 {
 	var productoUno;
 	var productoDos;
@@ -19,7 +19,7 @@ function Sumar ()
 	productoDos=parseInt(productoDos);
 	productoTres=parseInt(productoTres);
 
-	suma=(productoUno+productoDos+productoTres);
+	suma=productoUno+productoDos+productoTres;
 
 	alert("La suma es " +suma);
 
@@ -32,13 +32,13 @@ function Promedio ()
 	var productoTres;
 	var promedio;
 
-	document.getElementById('PrecioUno')=productoUno;
-	document.getElementById('PrecioDos')=productoDos;
-	document.getElementById('PrecioTres')=productoTres;
+	productoUno=PrecioUno.value;
+	productoDos=PrecioDos.value;
+	productoTres=PrecioTres.value;
 
 	productoUno=parseInt(productoUno);
 	productoDos=parseInt(productoDos);
-	productoTres=parseInt(productoTres3);
+	productoTres=parseInt(productoTres);
 
 	suma=productoUno+productoDos+productoTres;
 	promedio=suma/3;
