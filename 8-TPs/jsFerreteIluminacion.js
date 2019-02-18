@@ -10,50 +10,90 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+	var lamparas;
  	var unidades;
  	var marca;
+ 	var montoConDescuento;
+ 	var precio;
+ 	var descuento;
 
- 	lamparas=35;
+ 	precio=lamparas*35;
  	unidades=Cantidad.value;
- 	lamparas=parseInt(lamparas);
+ 	montoConDescuento=precioDescuento.value;
+
+ 	precio=parseInt(precio);
  	unidades=parseInt(unidades);
+ 	montoConDescuento=parseInt(montoConDescuento);
 
- 	if(unidades>=6)
+ 	switch(lamparas)
+ 		{
+ 		case 5:
+ 				if(variedad=="ArgentinaLuz")
+ 				{//las llaves de cada if se ponen a la altura del if
+ 					descuento=0.6;
+ 				}//y se cierran alli
+ 				else//no va este ELSENO VA ESTE ELSE
+ 				{
+ 				descuento=0.7;
+ 				}
+
+ 		}
+
+ 	if(lamparas>=6)
  	{
- 		importe==lamparas*0.5;
- 		}
- 		else
- 		{
- 			if(unidades==5 && marca=="ArgentinaLuz")
- 				importe=lamparas*0.6;
- 			}
- 			{else
- 				importe=lamparas*0.7;
- 				}
- 	if(unidades==4 && marca="ArgentinaLuz" || "FelipeLamparas")
- 		{
- 			importe=lamparas*0.75;
- 			}
- 		else
- 			importe=lamparas*0.8;
- 	if(unidades==3 && marca=="ArgentinaLuz")
- 		{importe=lamparas*0.85;
- 		if(unidades==3 && marca=="FelipeLamparas")
+ 		descuento=0.5;//asi esta bien
+ 	}
+ 	else //Asi se acomoda
+ 	{//aca se abre llaves del else
+ 		if(lamparas==5)//asi si
+ 		{	
+ 			if(variedad=="ArgentinaLuz")
+ 			{//las llaves de cada if se ponen a la altura del if
+ 				descuento=0.6;
+ 			}//y se cierran alli
+ 				else//no va este ELSENO VA ESTE ELSE
  			{
- 				importe=lamparas*0.9;
- 				}
- 		else
- 			importe=lamparas*0.95;
-
- 	if(precioDescuento==120)
- 	{	
- 		IngresosB=precioDescuento*0.1;
- 		importe=precioDescuento+IngresosB;
+ 				descuento=0.7;
+ 			}
  		}
+ 	}//aca cierro llaves del else
+ 
+ 	else
+ 	{	
+ 	if(unidades==4 && marca=="ArgentinaLuz" ||  marca =="FelipeLamparas")
+ 	{
+ 		importe=precio*0.75;
+ 	}
+ 		else
+ 		{
+ 			importe=precio*0.8;
+ 		}
+ 	}	
+ 		if(unidades==3 && marca=="ArgentinaLuz")
+ 	{
+ 		importe=precio*0.85;
+ 	}
+ 		if(unidades==3 && marca=="FelipeLamparas")
+ 		{
+ 			importe=precio*0.9;
+ 		}
+ 		else
+ 		{
+ 			importe=precio*0.95;
+ 		}
+precioFinal=precio*descuento;
+
+ 	if(montoConDescuento>=120)
+ 	{	
+ 		IngresosB=montoConDescuento*0.1;
+ 		importe=montoConDescuento+IngresosB;
+ 	}
+
 
  	alert("Usted pago " +IngresosB+ " de IIBB");
 
-}
+document.getElementById('precioDescuento').value=precioDescuento;
+
  			
 
 }
