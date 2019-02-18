@@ -38,9 +38,9 @@ function verificar()
 			alert("Te pasaste");
 	}
 	else
-		{
-		if(numeroingresado==numeroSecreto && contadorIntentos=1)
-	{
+		
+		{if(numeroingresado==numeroSecreto && contadorIntentos=1)}
+	
 	alert("usted es un Psíquico");
 	}
 	if(numeroingresado==numeroSecreto && contadorIntentos=2)
