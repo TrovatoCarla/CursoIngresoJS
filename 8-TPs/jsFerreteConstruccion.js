@@ -19,11 +19,21 @@ function Rectangulo ()
 	alambre=perimetro*3;
 
 	alert("La cantidad de alambre que necesita es " +alambre);
-	
+
 }
 function Circulo () 
 {
-	
+	var elRadio;
+	var alambre;
+
+	elRadio=Radio.value;
+	elRadio=parseFloat(elRadio);
+
+	alambre=2*elRadio*Math.PI;
+	circunsferencia=alambre*3;
+
+	alert("La cantidad de alambre necesario es " +alambre.toFixed(2)+ "m");
+
 }
 function Materiales () 
 {
