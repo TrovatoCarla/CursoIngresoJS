@@ -2,11 +2,12 @@ function mostrar()
 {
 //tomo la edad  
 var mesDelAño = document.getElementById('mes').value;
-var mensaje
+var mensaje=""; //SIN EL ="" FUNCIONA IGUAL
 
-	switch(mesDelAño)
+
+	switch(mesDelAño) 
 	{
-		case "Enero":
+		case "Enero": //PRESTAR ATENCION A LOS 2 PUNTOS SIEMPRE
 			mensaje="Que comiences bien el año";
 			break;
 
@@ -18,7 +19,7 @@ var mensaje
 			mensaje="se vienen las vacaciones!!!";
 			break;
 
-		case "Diciembre"
+		case "Diciembre":
 			mensaje="Felices fiestas!!!";
 			break;
 	}
