@@ -1,33 +1,31 @@
-// al realizar una compra, si compra de mas de dos productos se realiza un descuento de 10% y si supera los $ 2000 se agrega descuento adicional de 15%, si el pago es con tarjeta y no efectivo al precio final se le agrega un 10% de recargo
 {
-	//defino variables
-	var cantidad;
-	var importe;
-	var tipoDePago;
+	var numeroUno;
+	var numeroDos;
+
+	numeroUno=prompt("Ingrese el primer numero");
+	numeroDos=prompt("Ingrese el segundo numero");
+
 	
-	// tomo los datos
-	cantidad= prompt("ingrese cantidad");
-	importe= prompt("ingrese importe");	
-	tipo= prompt("ingrese tipo de pago 1- efete 2- tarjeta");
-
-	// parseint para los necesarios
-	cantidad= parseInt(cantidad);
-	importe= parseInt(importe);
-
-	if(productos>2)
+	if(numeroUno==numeroDos)
 	{
-		importe = importe*0.9;
-		if(importe>2000)
+		alert(numeroUno+numeroDos);
+	}
+
+	numeroUno=parseInt(numeroUno);
+	numeroDos=parseInt(numeroDos);
+
+	if(numeroUno>numeroDos)
+	{	
+		alert(numeroUno-numeroDos);
+	}
+		else
 		{
-			importe = importe*0.85;
-		}
-	}	
-	
-	if(tipoDePago=="2")
-	{
-		importe=importe*1.1;
-	}	
-	alert( "el importe es"+ importe);
-
+			suma=numeroUno+numeroDos;
+			alert(suma);
+		}	
+			if(suma>10)
+			{	
+				alert(suma+ "La suma es " +suma+ " y supero el 10 ");
+			}
 
 }
