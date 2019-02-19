@@ -25,48 +25,22 @@ function comenzar()
 }
 
 function verificar()
-{	contadorIntentos=contadorIntentos+1;
-	var numeroingresado;
-	numeroingresado=numero.value;
+{	
+	contadorIntentos=contadorIntentos+1;
+	var numeroIngresado;
+	numeroIngresado=numero.value;
+	contadorIntentos=intentos.value;
 
-	if(numeroingresado<numeroSecreto)
-		{
-			alert("Falta");
-		}
-	if(numeroingresado>numeroSecreto)
-		{
-			alert("Te pasaste");
-	}
-	else
+	if(numeroIngresado<numeroSecreto)
 		
-		{if(numeroingresado==numeroSecreto && contadorIntentos=1)}
-	
-	alert("usted es un Psíquico");
-	}
-	if(numeroingresado==numeroSecreto && contadorIntentos=2)
+
+
+
+	if(numeroIngresado==numeroSecreto && contadorIntentos==1)
 		{
-			alert("excelente percepción");
-		}
-	if(numeroingresado==numeroSecreto && contadorIntentos=3)
-		{
-		alert("Esto es suerte");
-		}
-	if(numeroingresado==numeroSecreto && contadorIntentos=4)
-		{alert("Excelente técnica");
-		}
-	if(numeroingresado==numeroSecreto && contadorIntentos=5)
-		{
-		alert("usted está en la media");
-		}
-	if(numeroingresado==numeroSecreto && contadorIntentos>=6<10)
-		{
-		alert("falta técnica");
-		}
-	if(numeroingresado==numeroSecreto && contadorIntentos>10)
-		{
-		alert("afortunado en el amor!!");
+			alert("Usted es un Psíquico");
 		}
 
-		}
+	
 }
 
