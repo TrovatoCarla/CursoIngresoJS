@@ -31,32 +31,24 @@ hora=laHora.value;
 			break;
 
 		default:
-			mensaje="es de noche";
-			
+			mensaje="es de noche"
 
+			if(hora>19 && hora<25)
+				
+				mensaje="a dormir";
+				
 	}
+
 
 	if(hora>24)
 	{
 		mensaje="hora no válida";
 	}
 
-	if(hora>19 && hora<25)
-	{	
-		mensaje="a dormir";
-	}
-
 	if(mensaje!="")
 	{	
 		alert(mensaje);
 	}
-
-
-
-
-
-
-
 
 	
 }
