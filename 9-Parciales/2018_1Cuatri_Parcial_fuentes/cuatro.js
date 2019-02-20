@@ -1,31 +1,47 @@
 {
-	var numeroUno;
-	var numeroDos;
 
-	numeroUno=prompt("Ingrese el primer numero");
-	numeroDos=prompt("Ingrese el segundo numero");
+	var valorUno;
+	var valorDos;
+	var varloTres;
+	var valorCuatro;
+	var descuento;
+	var aumento;
+	var precioFinal;
 
-	
-	if(numeroUno==numeroDos)
+	valorUno=prompt("Ingrese el primer valor");
+	valorDos=prompt("Ingrese el segundo valor");
+	varloTres=prompt("Ingrese el tercer valor");
+	valorCuatro=prompt("Ingrese el cuarto valor")
+
+	valorUno=parseInt(valorUno);
+	valorDos=parseInt(valorDos);
+	varloTres=parseInt(varloTres);
+	valorCuatro=parseInt(valorCuatro);
+	descuento=parseInt(descuento);
+	aumento=parseInt(aumento);
+
+
+	if(suma>=100)
 	{
-		alert(numeroUno+numeroDos);
+		descuento=0.90;
 	}
 
-	numeroUno=parseInt(numeroUno);
-	numeroDos=parseInt(numeroDos);
-
-	if(numeroUno>numeroDos)
-	{	
-		alert(numeroUno-numeroDos);
+	if(suma>=50)
+	{
+		descuento=0.95;
 	}
-		else
-		{
-			suma=numeroUno+numeroDos;
-			alert(suma);
-		}	
-			if(suma>10)
-			{	
-				alert(suma+ "La suma es " +suma+ " y supero el 10 ");
-			}
 
+	else
+	{
+		aumento=1.15;
+	}
+
+	suma=valorUno+valorDos+varloTres+valorCuatro;
+
+	precioFinal=suma-descuento;
+	precioFinal=suma+aumento;
+
+	alert("El precio final es " +precioFinal);
+
+			
 }
