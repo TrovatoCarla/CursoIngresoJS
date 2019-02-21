@@ -5,7 +5,7 @@ var sexo = prompt("ingrese f ó m .");
 
 while(sexo!="f" && sexo!="m")
 {
-	sexo=prompt("Ingrese nuevamente su sexo");
+	sexo=prompt("Ingrese nuevamente su sexo");//SE PIDE NUEVAMENTE EL SEXO
 
 }
 
