@@ -25,16 +25,17 @@
 	{
 		descuento=0.90;
 	}
-
-	if(suma>=50)
-	{
-		descuento=0.95;
-	}
-
 	else
-	{
-		aumento=1.15;
-	}
+
+		if(suma>=50)
+		{
+			descuento=0.95;
+		}
+
+		else
+		{
+			aumento=0.15;
+		}
 
 	suma=valorUno+valorDos+varloTres+valorCuatro;
 
