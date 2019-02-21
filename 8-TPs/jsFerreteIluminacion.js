@@ -16,6 +16,8 @@ function CalcularPrecio ()
  	var montoConDescuento;
  	var precio;
  	var descuento;
+ 	var ingresosB;
+ 	var precioFinal;
 
  	precio=lamparas*35;
  	unidades=Cantidad.value;
@@ -24,6 +26,7 @@ function CalcularPrecio ()
  	precio=parseInt(precio);
  	unidades=parseInt(unidades);
  	montoConDescuento=parseInt(montoConDescuento);
+ 	ingresosB=parseInt(ingresosB);
 
  	switch(unidades)
  	{
@@ -33,6 +36,7 @@ function CalcularPrecio ()
  			{
  				descuento=0.5;//asi esta bien
  			}
+ 		break;
 
  		case "5":
 
@@ -44,6 +48,7 @@ function CalcularPrecio ()
  			{
  				descuento=0.7;
  			}
+ 		break;
 
  		case "4":
 
@@ -56,7 +61,8 @@ function CalcularPrecio ()
  			{
  				descuento=0.8;
  			}
-			
+		break;
+
  		case "3":
 
  			if(marca=="ArgentinaLuz")
@@ -71,10 +77,19 @@ function CalcularPrecio ()
  			{
 				descuento=0.95;
 			}
+		break;
+
  	}
-{
-alert(descuento);
-}
+
+ 	montoConDescuento=precio*descuento;
+
+
+ 	
+ 	
+ 	document.getElementById('precioDescuento').value=montoConDescuento;
+
+ 	
+
 
 
 }
