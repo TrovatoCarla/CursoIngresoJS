@@ -13,6 +13,7 @@ var precio;
 var medioDePago;
 var paquete;
 var descuento;
+var masDescuento;
 
 precio=prompt("Indique precio de la habitacion");
 medioDePago=prompt("indique medio de pago");
@@ -20,9 +21,67 @@ paquete=prompt("Indique el paquete");
 
 precio=parseInt(precio);
 
+	switch (medioDePago)
+	{
+		case "tarjeta Visa":
+		case "mercadoPago":
+			
+			descuento=0.9;
+			break;
+		case "paypal":
+			
+			switch(paquete)
+			{
+				case "todoincluido":
+					descuento=0.75;
+					break;
+				default:
+					descuento=0.85;
+			}
+			break;
+		
+		case "efectivo":
+		
+			switch(paquete)
+			{
+				case "soloDesayunos":
+					descuento=0.7;
+					break;
+				default:
+					descuento=0.8;
+			}
+			break;
 
 
+			
+			descuento=0.8;
+			break;
+		default:
+			descuento=0.95;
+			break;
+	
 
+		switch(paquete)
+		{
+			case "todo incluido":
+				descuento=0.85;
+				switch(medioDePago)
+				{
+					case "paypal":
+						descuento=0.75;
+
+					case "efectivo":
+						descuento=0.65;
+				}	
+
+			case "soloDesayunos":
+				switch 
+				{
+
+
+				}
+
+	}
 
 
 
