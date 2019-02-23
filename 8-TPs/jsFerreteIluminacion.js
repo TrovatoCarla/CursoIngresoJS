@@ -10,84 +10,94 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var lamparas;
- 	var unidades;
- 	var marca;
- 	var montoConDescuento;
- 	var precio;
- 	var descuento;
- 	var ingresosB;
- 	var precioFinal;
 
- 	precio=lamparas*35;
- 	unidades=Cantidad.value;
- 	montoConDescuento=precioDescuento.value;
+ 	
+ 	var cantidad;//1ªvariable
+ 	var marca;//2ª variable
+ 	var totalBruto;
+ 	var pocentajeDeDescuento=0;//igualo a 0 por si compra 1 o 2 lamparas no me calcule descuento
+ 	var totalConDescuento;
+ 	//var precio;
+ 	//var descuento;
+ 	var ingresosB=0;//le asigno cero porque si no supera los 120$ que no me calcule nada de INg BRutos,si lo tiene va a tomar el if de INgresosBrutos
+ 	//var precioFinal;
 
- 	precio=parseInt(precio);
- 	unidades=parseInt(unidades);
- 	montoConDescuento=parseInt(montoConDescuento);
- 	ingresosB=parseInt(ingresosB);
+ 	cantidad=document.getElementById('Cantidad').value;
+ 	marca=document.getElementById("Cantidad").value;
 
- 	switch(unidades)
+ 	//precio=parseInt(precio);
+ 	cantidad=parseInt(cantidad);
+ 	//montoConDescuento=parseInt(montoConDescuento);
+ 	//ingresosB=parseInt(ingresosB);
+
+ 	totalBruto=cantidad*35;
+
+ 	if(cantidad>=6)
  	{
- 		case "6":
-
- 			if(unidades>=6)
+ 		porcentajeDeDescuento=0.5;
+ 	}
+ 	else//meto else para q evalue directo este si no es if
+ 	{
+ 		if(cantidad==5) && //marca=="ArgentinaLuz")no va xq son 2 marcas la condicion
+ 		{
+ 			if(marca=="ArgentinaLuz")// este funciona como un && ya que en el primer if no lo puedo usar porque son dos condiciones de marca
  			{
- 				descuento=0.5;//asi esta bien
- 			}
- 		break;
-
- 		case "5":
-
- 			if(marca=="ArgentinaLuz")
- 			{//las llaves de cada if se ponen a la altura del if
- 				descuento=0.6;
- 			}//y se cierran alli
- 			if(marca!="ArgentinaLuz")//no va este ELSENO VA ESTE ELSE
- 			{
- 				descuento=0.7;
- 			}
- 		break;
-
- 		case "4":
-
- 			if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
- 			{
- 				descuento=0.75;
- 			}
- 			
- 			else
- 			{
- 				descuento=0.8;
- 			}
-		break;
-
- 		case "3":
-
- 			if(marca=="ArgentinaLuz")
- 			{
- 				descuento=0.85;
- 			}
- 			if(marca=="FelipeLamparas")
- 			{
- 				descuento=0.9;
+ 				porcentajeDeDescuento=0.4;
  			}
  			else
  			{
-				descuento=0.95;
-			}
-		break;
+ 				porcentajeDeDescuento=0.3;
+ 			}
+ 		}	
 
+ 		else
+ 		{
+ 			if(cantidad==4)
+ 			{
+ 				if(marca=="ArgentinaLuz" || marca == "“FelipeLamparas”")
+ 				{
+ 					porcentajeDeDescuento=0.25;
+ 				}
+ 				else
+ 				{
+ 					porcentajeDeDescuento=0.20;
+ 				}
+ 			}
+
+ 			else
+ 			{
+ 				if(cantidad==3)
+ 				{
+ 					if(marca=="ArgentinaLuz")
+ 					{
+ 						porcentajeDeDescuento=0.15;
+ 					}
+ 				}	
+ 				else
+ 				{
+ 					if (marca=="“FelipeLamparas”")
+ 					{
+ 						porcentajeDeDescuento=0.1;
+ 					}
+ 					else
+ 					{
+ 						porcentajeDeDescuento=0.05;
+ 					}
+ 				}
+ 			}
+ 		}
  	}
 
- 	montoConDescuento=precio*descuento;
+ 	totalConDescuento=totalBruto - (totalBruto*porcentajeDeDescuento);
 
+ 	if(totalConDescuento>120)
+ 	{
+ 		ingresosB=(totalConDescuento*0.1);
+ 		alert("Usted pago " +ingresosB+ "de Ingresos Brutos")
+ 	}
 
- 	
- 	
- 	document.getElementById('precioDescuento').value=montoConDescuento;
-
+ 	document.getElementById("precioDescuento").value=totalConDescuento+ingresosB;
+}
  	
 
 
