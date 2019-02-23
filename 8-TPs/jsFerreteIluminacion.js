@@ -38,7 +38,7 @@ function CalcularPrecio ()
  	}
  	else//meto else para q evalue directo este si no es if
  	{
- 		if(cantidad==5) && //marca=="ArgentinaLuz")no va xq son 2 marcas la condicion
+ 		if(cantidad==5) //marca=="ArgentinaLuz")no va xq son 2 marcas la condicion
  		{
  			if(marca=="ArgentinaLuz")// este funciona como un && ya que en el primer if no lo puedo usar porque son dos condiciones de marca
  			{
@@ -93,7 +93,7 @@ function CalcularPrecio ()
  	if(totalConDescuento>120)
  	{
  		ingresosB=(totalConDescuento*0.1);
- 		alert("Usted pago " +ingresosB+ "de Ingresos Brutos")
+ 		alert("Usted pago " +ingresosB+ "de Ingresos Brutos");
  	}
 
  	document.getElementById("precioDescuento").value=totalConDescuento+ingresosB;
@@ -102,4 +102,3 @@ function CalcularPrecio ()
 
 
 
-}
