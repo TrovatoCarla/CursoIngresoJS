@@ -1,25 +1,31 @@
 function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
-	var numRan;
+	var nota;
 
-	numRan=Math.floor(Math.random() * 10) + 1; 
+	nota=Math.floor(Math.random() * 10) + 1;
+	{
+		alert(nota);
+	}
 
-	alert(numRan);
-
-	if (numRan>=9)
+	if(nota>=9)
+	{
+		alert("EXCELENTE");
+	}
+	else
+	{
+		if(nota<9 && nota>=4)
 		{
-			alert("EXCELENTE");
-			}
+			alert("APROBO");
+		}
 		else
 		{
-		if(numRan>4)
-			{alert("APROBÓ");
+			alert("Vamos, la proxima se puede");
 		}
-		else
-		{	
-		alert("Vamos, la próxima se puede");
-		}
-		}
-
+	}
 }//FIN DE LA FUNCIÓN
+
+
+
+
+
