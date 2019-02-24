@@ -1,20 +1,20 @@
 function mostrar()
 {
-
+	var numero;
 	var contador=0;
 	var acumulador=0;
-	var respuesta='si';
+	var respuesta="si";
 
-while(contador=="si")//pongo el maximo 
-{
-	numero=prompt("Ingrese numero");
-	contador=contador+1;//se le suma un literal
-	numero=parseInt(numero);
-	acumulador=acumulador+numero;//se le suma una variable
-	respuesta=prompt("Ingrese si para continuar");
-}
+	while(contador=="si")
+	{
+		numero=prompt("Ingrese un numero");
+		contador=contador+1;
+		numero=parseInt(numero);
+		acumulador=acumulador+numero;
+		respuesta=prompt("Desea continuar?");
+	}
 
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
-
+	document.getElementById('suma').value=acumulador;
+	document.getElementById("promedio").value=acumulador/contador;
+	
 }//FIN DE LA FUNCIÓN
