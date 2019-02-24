@@ -1,38 +1,24 @@
 function mostrar()
 {
 //tomo la edad  
-	var suEdad;
+	var años;
 
-	suEdad=edad.value;
+	años=document.getElementById('edad').value;
 
-	suEdad=parseInt(suEdad);
-/*
-	if (suEdad>18)
+	if(años>=13 && años<18)
 	{
-		alert("Usted es mayor de edad");
-	}
-	if (suEdad<13)
-	{
-		alert("Usted es un niño");
+		alert("Usted es adolescente");
 	}
 	else
 	{
-		alert("Usted es un adolescente");
+		if(años>17)
+		{
+			alert("Usted es mayor de edad");
 		}
-*/
-
-if(suEdad>18)
-{
-	alert("Usted es mayor de edad");
-}
-else
-	if(suEdad<13)
-{
-	alert("Usted es menor de edad");
-}
-else
-	{
-		alert("Usted es adolescente");
-}
+		else
+		{
+			alert("Usted es un niño");
+		}
+	}
 
 }//FIN DE LA FUNCIÓN

@@ -54,7 +54,7 @@ function CalcularPrecio ()
  		{
  			if(cantidad==4)
  			{
- 				if(marca=="ArgentinaLuz" || marca == "“FelipeLamparas”")
+ 				if(marca=="ArgentinaLuz" || marca == "FelipeLamparas")
  				{
  					porcentajeDeDescuento=0.25;
  				}
@@ -72,27 +72,29 @@ function CalcularPrecio ()
  					{
  						porcentajeDeDescuento=0.15;
  					}
- 				}	
- 				else
- 				{
- 					if (marca=="“FelipeLamparas”")
- 					{
- 						porcentajeDeDescuento=0.1;
- 					}
  					else
  					{
- 						porcentajeDeDescuento=0.05;
+ 						if (marca=="“FelipeLamparas”")
+ 						{
+ 							porcentajeDeDescuento=0.1;
+ 						}
+ 						else
+ 						{
+ 							porcentajeDeDescuento=0.05;
+ 						}
  					}
- 				}
+ 				}	
  			}
  		}
  	}
 
  	totalConDescuento=totalBruto - (totalBruto*porcentajeDeDescuento);
+ 	document.getElementById("precioDescuento").value=totalConDescuento;
 
  	if(totalConDescuento>120)
  	{
  		ingresosB=(totalConDescuento*0.1);
+
  		alert("Usted pago " +ingresosB+ "de Ingresos Brutos");
  	}
 

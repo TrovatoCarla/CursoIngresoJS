@@ -1,15 +1,17 @@
 function mostrar()
 {
-//tomo la edad  
-var laEdad;
+	var años;
 
-laEdad=edad.value;
+	años=document.getElementById('edad').value;
 
-if (laEdad==15)
-
-
-alert("Niña bonita");
-
+	if(años==15)
+	{
+		alert("Niña bonita");
+	}
+	else
+	{
+		alert("Usted no tiene 15 años");
+	}
 
 
 }//FIN DE LA FUNCIÓN
