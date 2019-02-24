@@ -16,30 +16,33 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 	/*{
 	alert(numeroSecreto);
 	*/
-	contadorIntentos=intentos=0;
+	console.log(numeroSecreto);// Me da el numero random cuando pongo COMENZAR
+	contadorIntentos=0;
 
 
 }
 
 function verificar()
 {
-	contadorIntentos=contadorIntentos+1
+	
 	var numeroIngresado;
-	numeroIngresado=numeroSecreto.value;
-	contadorIntentos=intentos.value;
+	numeroIngresado=numero.value;
 	
-	
-
-	if(numeroIngresado>numeroSecreto)
-	{
-		alert("te pasaste");
-	}
-	if(numeroIngresado<numeroSecreto)
-	{
-		aler("falta");
-	}
 	if(numeroIngresado==numeroSecreto)
 	{
-		alert("Usted es un ganador!!! y en solo X intentos");
+		alert("Usted es un ganador!!! y en solo " +contadorIntentos+ " intentos");
 	}
+
+	else
+		if(numeroIngresado>numeroSecreto)
+		{
+			alert("te pasaste");
+		}
+		else
+			if(numeroIngresado<numeroSecreto)
+			{
+				alert("falta");
+			}
+	contadorIntentos=contadorIntentos+1;
+
 }

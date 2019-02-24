@@ -12,35 +12,72 @@ Más de 10 intentos: “afortunado en el amor!!”.*/
 var numeroSecreto; 
 var contadorIntentos;
 
+
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 numeroSecreto=Math.floor(Math.random() * 100) + 1;
-
-	 //alert(numeroSecreto);
-
-	 contadorIntentos=0;
+	
+	numeroSecreto=Math.floor(Math.random() * 100) + 1;
+	console.log(numeroSecreto);
+	contadorIntentos=intentos.value;
+	contadorIntentos=0;
 	
 
 }
 
 function verificar()
 {	
-	contadorIntentos=contadorIntentos+1;
 	var numeroIngresado;
 	numeroIngresado=numero.value;
-	contadorIntentos=intentos.value;
+	numeroIngresado=parseInt(numeroIngresado);
 
-	if(numeroIngresado<numeroSecreto)
-		
-
-
-
-	if(numeroIngresado==numeroSecreto && contadorIntentos==1)
+	if(numeroIngresado==numeroSecreto && contadorIntentos>=10 )
+	{
+		alert("afortunado en el amor!!");
+	}
+	else
+	{
+		if(numeroIngresado==numeroSecreto && contadorIntentos>=6)
 		{
-			alert("Usted es un Psíquico");
+			alert("falta técnica");
 		}
+		else
+		{
+			if(numeroIngresado==numeroSecreto && contadorIntentos==5)
+			{
+				alert("usted está en la media");
+			}
+			else
+			{
+				if(numeroIngresado==numeroSecreto && contadorIntentos==4)
+				{
+					alert("Excelente técnica");
+				}
+				else
+				{
+					if(numeroIngresado==numeroSecreto && contadorIntentos==3)
+					{
+						alert("Esto es suerte");
+					}
+					else
+					{
+						if(numeroIngresado==numeroSecreto && contadorIntentos==2)
+						{
+							alert("excelente percepción");
+						}
+						else
+						{
+							if(numeroIngresado==numeroSecreto && contadorIntentos==1)
+							{
+								alert("usted es un Psíquico");
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
+	contadorIntentos=contadorIntentos+1;
 	
 }
 
