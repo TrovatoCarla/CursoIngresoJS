@@ -9,5 +9,33 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	
+ 	/*var num;
+
+ 	num=prompt("Ingrese un numero positivo");
+ 	num=parseInt(num);
+ 	contador=0;*/
+
+
 }
+
+
+function NumerosPares ()
+{
+	alert("kokoo");
+}
+
+function NumerosImpares ()
+{
+	alert("hola");
+}
+
+function VerificarPrimo ()
+{
+	alert("lunes");
+}
+
+function NumerosPrimos ()
+{
+
+}
+

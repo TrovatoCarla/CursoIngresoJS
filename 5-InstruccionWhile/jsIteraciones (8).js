@@ -3,12 +3,12 @@ function mostrar()
 
 	var contador=0;
 	var positivo=0;
-	var negativo=1;
+	var negativo=0;
 	var numero;
 	
 	var respuesta='si';
 
-while(contador=="si")//pongo el maximo 
+while(respuesta!="no")//pongo el maximo 
 {
 	numero=prompt("Ingrese numero");
 	contador=contador+1;//se le suma un literal
@@ -24,7 +24,7 @@ while(contador=="si")//pongo el maximo
 	}
 	
 	respuesta=prompt("Ingrese si para continuar");
-
+}
 document.getElementById('suma').value=positivo;
 document.getElementById('producto').value=negativo;
 
