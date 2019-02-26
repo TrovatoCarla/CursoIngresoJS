@@ -29,6 +29,8 @@ function mostrar()
 			sexo=prompt("Ingrese un sexo valido, f o m");
 		}
 
+
+
 		if(contador==1)
 		{
 			notaMasBaja=numero;
