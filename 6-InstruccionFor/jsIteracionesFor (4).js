@@ -1,5 +1,9 @@
 function mostrar()
 {
+	var boton;
+	var contador;
+
+	for()
 
 
 
