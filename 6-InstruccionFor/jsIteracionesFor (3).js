@@ -3,29 +3,17 @@ function mostrar()
 
 //var repetciones = prompt("ingrese el número de repeticiones");
 
-	var numeroIngresado;
-	var numeroPerfecto;
-	var acumulador;
+	var numero;
+	var contador=1;
 
-	numeroIngresado=prompt("Ingrese numero");
-	numeroIngresado=parseInt(numeroIngresado);
+	numero=prompt("Indique la cantidad");
+	numero=parseInt(numero);
 
-	for(recorrido=numeroIngresado-1;recorrido>1;recorrido--)// este recorre todos los numeros!
-	{		
-		for(numeroAnterior=recorrido-1;numeroAnterior>0;numeroAnterior--)// este me saca el numero perfecto!
-		{
-			//console.log(numeroAnterior);
-			if(numeroIngresado% numeroAnterior==0)
-			{
-				acumulador=acumulador+numeroAnterior;
-			}
-
-		}
-
-		if(numeroIngresado==acumulador)
-		 {
-	 		console.log("Es perfecto" +numeroIngresado);
-		 }
+	for(;contador<=numero;)
+	{
+		
+		alert("Hola UTN FRA");
+		contador=contador+1;
 		
 	}
 

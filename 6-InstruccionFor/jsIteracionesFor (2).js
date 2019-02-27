@@ -1,37 +1,10 @@
 function mostrar()
 {
-	var numeroIngresado;
-	var numeroAnterior;
+	var contador=10;
 
-	numeroIngresado=prompt("Ingrese numero");
-	numeroIngresado=parseInt(numeroIngresado);
-
-	for(recorrido=numeroIngresado-1;recorrido>1;recorrido--)
+	for(;contador>0;contador--)
 	{
-		for(numeroAnterior=recorrido-1;numeroAnterior>1;numeroAnterior--)
-		{
-			//console.log(numeroAnterior);
-			if(recorrido% numeroAnterior==0)
-			{
-				break;
-			}
-
-		}
-
-	if(numeroAnterior==1)
-	 {
-	 		console.log("Es primo" +recorrido);
-	 }
+		alert(contador);
 		
 	}
-
-
-
-	 
-
-	 	/*else
-	 	{
-	 		console.log("Es primo");
-	 	}*/
-	 
 }
