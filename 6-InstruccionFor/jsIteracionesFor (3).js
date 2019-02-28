@@ -7,7 +7,7 @@ function mostrar()
 	var contador=1;
 
 	numero=prompt("Indique la cantidad");
-	numero=parseInt(numero);
+	
 
 	for(;contador<=numero;)
 	{

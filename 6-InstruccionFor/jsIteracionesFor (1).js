@@ -77,6 +77,16 @@ function mostrar()
 	console.log("El numero nueve  salio " +contadorNueve+ " veces "+contadorNueve/contador*100+ "%");
 	console.log("El numero diez salio " +contadorDiez+ " veces "+contadorDiez/contador*100+ "%");
 	console.log(contador);
+
+
+	palabra="Luz azul";
+
+	for(i=0;i<palabra.length;i++)
+	{
+		console.log(palabra[i]);
+
+	}
+
 }
 
 
