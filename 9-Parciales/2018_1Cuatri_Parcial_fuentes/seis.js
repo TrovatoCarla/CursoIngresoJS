@@ -1,12 +1,10 @@
 function mostrar()
 {
-var hora;
-var mensaje="";
+	var hora;
 
-hora=laHora.value;
+	hora=laHora.value;
 
-
-	switch (hora)
+	switch(hora)
 	{
 		case "6":
 		case "7":
@@ -14,9 +12,8 @@ hora=laHora.value;
 		case "9":
 		case "10":
 		case "11":
-
-			mensaje="es de mañana";
-			break;
+		alert("ES DE MAÑANA");
+		break;
 
 		case "12":
 		case "13":
@@ -26,29 +23,16 @@ hora=laHora.value;
 		case "17":
 		case "18":
 		case "19":
-
-			mensaje="es de tarde";
-			break;
+		alert("ES DE TARDE");
+		break;
 
 		default:
-			mensaje="es de noche"
+		alert("ES DE NOCHE");
+		break;
 
-			if(hora>19 && hora<25)
-				
-				mensaje="a dormir";
-				
 	}
-
-
-	if(hora>24)
-	{
-		mensaje="hora no válida";
-	}
-
-	if(mensaje!="")
-	{	
-		alert(mensaje);
-	}
-
-	
+ 	if(hora>=20 && hora<25)
+ 	{
+ 		alert("A DORMIR");
+ 	}
 }
