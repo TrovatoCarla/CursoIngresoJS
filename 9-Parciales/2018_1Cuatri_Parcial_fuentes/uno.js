@@ -1,21 +1,18 @@
 
-//alert ("ustedes son xxx y xxx, sus edades son xx y xx, y la suma de sus edades es xx")
+ function mostrar ()
 {
-	var nombreUno;
-	var nombreDos;
-	var edadUno;
-	var edadDos;
+	var ancho;
+	var largo;
+	var perimetro;
 
-	nombrUno=prompt("Por favor indica tu nombre");
-	nombreDos=prompt("Por favor indica tu nombre");
-	edadUno=prompt("Indica tu edad");
-	edadDos=prompt("Indica tu edad");
+	ancho=prompt("Indique el ancho");
+	ancho=parseInt(ancho);
 
-	edadUno=parseInt(edadUno);
-	edadDos=parseInt(edadDos);
-	suma=edadUno+edadDos;
+	largo=prompt("Indique el largo");
+	largo=parseInt(largo);
 
-	alert("Ustedes son" +nombrUno+ "y" +nombreDos+ "y la suma de sus edades es" +suma);
+	perimetro=(largo+ancho)*2;
 
+	alert("El perimetro del rectangulo es :" +perimetro);
 
 }

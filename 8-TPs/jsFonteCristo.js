@@ -1,4 +1,4 @@
-/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
+5/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
 
 13.	Para cada una de estas acciones  debemos realizar la lógica para verificar las cualidades pedidas:
 a.	Se pedirán un número positivo y se mostrará la cantidad de números pares desde el número ingresado hasta el cero.
@@ -9,33 +9,8 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	/*var num;
+ 	var numeroIngresado;
 
- 	num=prompt("Ingrese un numero positivo");
- 	num=parseInt(num);
- 	contador=0;*/
-
-
+ 	numeroIngresado=parseInt(numeroIngresado);
+ 	
 }
-
-
-function NumerosPares ()
-{
-	alert("kokoo");
-}
-
-function NumerosImpares ()
-{
-	alert("hola");
-}
-
-function VerificarPrimo ()
-{
-	alert("lunes");
-}
-
-function NumerosPrimos ()
-{
-
-}
-
