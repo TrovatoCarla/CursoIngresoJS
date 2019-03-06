@@ -2,44 +2,43 @@ function mostrar()
 {
 	var letra;
 	var numero;
-	var acumulador=0;
 	var respuesta="si";
-	var resto;
-	var par;
-	var contadorPar=0;
-	var contadorImpar=0;
+	var contadorPares=0;
+	var contadorImpares=0;
 	var contadorCeros=0;
-	var acumuladorPositivos=0;
-	var contadorPositivos=0;
 	var promedio;
-	var acumuladorNegativo=0;
-	var numeroMaximo;
-	var numeroMinimo;
-	var letraMaxima;
-	var letraMinima;
+	var contadorPositivos=0;
+	var acumuladorPositivos=0;
+	var acumuladorNegativos=0;
 	var flag=0;
+	var numeroMinimo;
+	var letraMinima;
+	var numeroMaximo;
+	var letraMaxima;
 
 	while(respuesta=="si")
 	{
-		numero=prompt("Ingrese numero de -100 al 100");
+		letra=prompt("Ingrese letra");
+		numero=prompt("Ingrese numero");
+
 		numero=parseInt(numero);
-		
+
 		while(numero<-100 || numero>100)
 		{
-			numero=prompt("Numero invalido, REINGRESE");
+			alert("Numero invalido");
+			numero=prompt("Reingrese numero valido");
 		}
-		letra=prompt("Ingrese Letra");
-		respuesta=prompt("Desea continuar?");
-
-		resto=numero%2;
-
-		if(resto==0)
+		
+		if(numero%2==0 && numero!=0)
 		{
-			contadorPar=contadorPar+1;
+			contadorPares=contadorPares+1;
 		}
 		else
-		{
-			contadorImpar=contadorImpar+1;
+		{	if(numero!=0)
+			{
+				contadorImpares=contadorImpares+1;
+			}
+			
 		}
 
 		if(numero==0)
@@ -48,46 +47,42 @@ function mostrar()
 		}
 
 		if(numero>0)
-		{	
+		{
+			contadorPositivos=contadorPositivos+1
 			acumuladorPositivos=acumuladorPositivos+numero;
-			contadorPositivos=contadorPositivos+1;
-			
 		}
+
 		if(numero<0)
 		{
-			acumuladorNegativo=acumuladorNegativo+numero;
-			
+			acumuladorNegativos=acumuladorNegativos+numero;
+		}
+
+		if(flag==0 || numero<numeroMinimo)
+		{
+			numeroMinimo=numero;
+			letraMinima=letra;
 		}
 
 		if(flag==0 || numero>numeroMaximo)
 		{
 			numeroMaximo=numero;
 			letraMaxima=letra;
-		}
-		if(flag==0 || numero<numeroMinimo)
-		{
-			numeroMinimo=numero;
-			letraMinima=letra;
 			flag=1;
 		}
+
+		respuesta=prompt("Desea continuar?");
+
 	}
+	promedio=acumuladorPositivos/contadorPositivos;
 
-	document.write("La cantidad de numeros pares es :" +contadorPar+ "<br>");
-	document.write("La cantidad de numeros impares es :" +contadorImpar+ "<br>");
-	document.write("La cantidad de ceros es: " +contadorCeros+ "<br>");
 
-	if(contadorPositivos>0)
-			{
-				promedio=acumuladorPositivos/contadorPositivos;
-				document.write("Promedio de positivos: " +promedio+ "<br>");
-			}
-			else
-			{
-				document.write("No se ingresaron positivos" +"<br>");
-			}
 
-	document.write("La suma de negativos es :" +acumuladorNegativo+"<br>");
-	document.write("El numero y letra maxima es : " +numeroMaximo+ "y " +letraMaxima+ "<br>");
-	document.write("El numero y letra minima es : " +numeroMinimo+ "y " +letraMinima+ "<br>");
+	alert("La cantidad de numero pares es: " +contadorPares);
+	alert("La cantidad de numero impares es: " +contadorImpares);
+	alert("La cantidad de ceros ingresados fue: " +contadorCeros);
+	alert("El promedio de positivos es: " +promedio);
+	alert("La suma de numeros negativos es: " +acumuladorNegativos);
+	alert("El numero minimo es: " +numeroMinimo+ " con letra " +letraMinima);
+	alert("El numero maximo es: " +numeroMaximo+ " con letra " +letraMaxima);
 
-}
+}	

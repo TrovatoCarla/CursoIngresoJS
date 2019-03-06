@@ -5,14 +5,14 @@
 	var largo;
 	var perimetro;
 
-	ancho=prompt("Indique el ancho");
-	ancho=parseInt(ancho);
+	ancho=prompt("Indique el ancho del rectangulo");
+	largo=prompt("Ahora el largo");
 
-	largo=prompt("Indique el largo");
+	ancho=parseInt(ancho);
 	largo=parseInt(largo);
 
-	perimetro=(largo+ancho)*2;
+	perimetro=(ancho+largo)*2;
 
-	alert("El perimetro del rectangulo es :" +perimetro);
+	alert("El perimetro es: " +perimetro);
 
 }

@@ -7,22 +7,25 @@ function mostrar()
 	switch(planetas)
 	{
 		case "tierra":
-		alert("Acá vivimos");
-		break;
+			alert("Acá vivimos");
+			break;
 
 		case "mercurio":
 		case "venus":
-		alert("Acá hace más calor");
-		break;
+			alert("Acá hace mas calor");
+			break;
 
-		case "jupiter":
-		case "saturno":
-		case "urano":
 		case "marte":
+		case "saturno":
 		case "neptuno":
-		alert("Acá hace más frío");
-		break;
-		
+		case "jupiter":
+		case "urano":
+			alert("Acá hace más frío");
+			break;
+
+			default:
+			alert("Planeta invalido, reingrese");
+			break;
 	}
 
 

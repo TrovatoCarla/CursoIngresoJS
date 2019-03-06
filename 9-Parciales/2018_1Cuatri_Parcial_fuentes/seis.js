@@ -2,7 +2,7 @@ function mostrar()
 {
 	var hora;
 
-	hora=laHora.value;
+	hora=document.getElementById('laHora').value;
 
 	switch(hora)
 	{
@@ -12,8 +12,8 @@ function mostrar()
 		case "9":
 		case "10":
 		case "11":
-		alert("ES DE MAÑANA");
-		break;
+			alert("Es de mañana");
+			break;
 
 		case "12":
 		case "13":
@@ -23,16 +23,23 @@ function mostrar()
 		case "17":
 		case "18":
 		case "19":
-		alert("ES DE TARDE");
-		break;
+			alert("Es de tarde");
+			break;
 
 		default:
-		alert("ES DE NOCHE");
-		break;
+			if(hora>24 || hora<0)
+			{
+				alert("Hora invalida,reingrese");
+			}
 
-	}
- 	if(hora>=20 && hora<25)
- 	{
- 		alert("A DORMIR");
- 	}
+			else
+			{
+				alert("Es de noche");
+
+					if(hora>=20 && hora<=24)
+					{
+						alert("A dormir");
+					}
+			}
+	}		
 }
