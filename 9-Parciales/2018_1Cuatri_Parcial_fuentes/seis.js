@@ -41,5 +41,6 @@ function mostrar()
 						alert("A dormir");
 					}
 			}
+			break;
 	}		
 }

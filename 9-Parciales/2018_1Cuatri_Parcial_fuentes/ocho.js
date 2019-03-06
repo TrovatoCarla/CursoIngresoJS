@@ -77,12 +77,12 @@ function mostrar()
 
 
 
-	alert("La cantidad de numero pares es: " +contadorPares);
-	alert("La cantidad de numero impares es: " +contadorImpares);
-	alert("La cantidad de ceros ingresados fue: " +contadorCeros);
-	alert("El promedio de positivos es: " +promedio);
-	alert("La suma de numeros negativos es: " +acumuladorNegativos);
-	alert("El numero minimo es: " +numeroMinimo+ " con letra " +letraMinima);
-	alert("El numero maximo es: " +numeroMaximo+ " con letra " +letraMaxima);
+	document.write("La cantidad de numero pares es: " +contadorPares);
+	document.write("La cantidad de numero impares es: " +contadorImpares);
+	document.write("La cantidad de ceros ingresados fue: " +contadorCeros);
+	document.write("El promedio de positivos es: " +promedio);
+	document.write("La suma de numeros negativos es: " +acumuladorNegativos);
+	document.write("El numero minimo es: " +numeroMinimo+ " con letra " +letraMinima);
+	document.write("El numero maximo es: " +numeroMaximo+ " con letra " +letraMaxima);
 
 }	
