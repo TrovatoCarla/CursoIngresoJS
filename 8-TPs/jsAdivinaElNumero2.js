@@ -19,7 +19,7 @@ function comenzar()
 	numeroSecreto=Math.floor(Math.random() * 100) + 1;
 	console.log(numeroSecreto);
 	contadorIntentos=intentos.value;
-	contadorIntentos=0;
+	contadorIntentos=1;
 	
 
 }
@@ -27,57 +27,61 @@ function comenzar()
 function verificar()
 {	
 	var numeroIngresado;
-	numeroIngresado=numero.value;
-	numeroIngresado=parseInt(numeroIngresado);
 
-	if(numeroIngresado==numeroSecreto && contadorIntentos>=10 )
+	numeroIngresado=document.getElementById('numero').value;
+
+	if(numeroIngresado>numeroSecreto)
 	{
-		alert("afortunado en el amor!!");
+		alert("Te pasaste!");
 	}
+
+	if(numeroIngresado<numeroSecreto)
+	{
+		alert("Te falta");
+	}
+
 	else
 	{
-		if(numeroIngresado==numeroSecreto && contadorIntentos>=6)
+
+		if(numeroIngresado==numeroSecreto && contadorIntentos==1)
+		{
+			alert("usted es un Psíquico");
+		}
+
+		if(numeroIngresado==numeroSecreto && contadorIntentos==2)
+		{
+			alert("excelente percepción");
+		}
+
+		if(numeroIngresado==numeroSecreto && contadorIntentos==3)
+		{
+			alert("Esto es suerte");
+		}
+
+		if(numeroIngresado==numeroSecreto && contadorIntentos==4)
+		{
+			alert("Excelente técnica");
+		}
+
+		if(numeroIngresado==numeroSecreto && contadorIntentos==5)
+		{
+			alert("usted está en la media");
+		}
+
+		if(numeroIngresado==numeroSecreto && contadorIntentos>=6 && contadorIntentos<10)
 		{
 			alert("falta técnica");
 		}
-		else
-		{
-			if(numeroIngresado==numeroSecreto && contadorIntentos==5)
-			{
-				alert("usted está en la media");
-			}
-			else
-			{
-				if(numeroIngresado==numeroSecreto && contadorIntentos==4)
-				{
-					alert("Excelente técnica");
-				}
-				else
-				{
-					if(numeroIngresado==numeroSecreto && contadorIntentos==3)
-					{
-						alert("Esto es suerte");
-					}
-					else
-					{
-						if(numeroIngresado==numeroSecreto && contadorIntentos==2)
-						{
-							alert("excelente percepción");
-						}
-						else
-						{
-							if(numeroIngresado==numeroSecreto && contadorIntentos==1)
-							{
-								alert("usted es un Psíquico");
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 
+		if(numeroIngresado==numeroSecreto && contadorIntentos>10)
+		{
+			alert("afortunado en el amor!!");
+		}
+
+	}
 	contadorIntentos=contadorIntentos+1;
+
+
 	
 }
 
